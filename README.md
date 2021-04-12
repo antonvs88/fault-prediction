@@ -1,7 +1,7 @@
 # fault-prediction
 A machine learning model for fault prediction.
 
-Sensor measurements are used to predict the failure of an expensive machine component.
+Sensor measurements are used to predict the failure of an expensive machine component. The sensor that best predicts component lifetime is identified. Then an XGBoost forecast model is fitted to the data.
 
 The files work at least on Ubuntu 16.04 using Anaconda 4.5.12
 
