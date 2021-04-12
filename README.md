@@ -3,31 +3,13 @@ A machine learning model for fault prediction.
 
 Sensor measurements are used to predict the failure of an expensive machine component.
 
+The files work at least on Ubuntu 16.04 using Anaconda 4.5.12
+
 <h4>Contents of repository</h4>
 
-The repository includes codes for NSGA-II, simulation and a graphical user interface (GUI). The folders in the repository:
+The repository includes scripts for data extraction and analysis, feature selection, model fitting and prediction. 
 
-* *data_extraction_and_analysis.ipynb* contains files for running the GUI
-* *feature_selection_and_modeling.ipynb* contains the files that build the GUI
-* *expanding_window.py* contains all files for simulating the movement of a crowd
-* *data* includes files to run the combined numerical simulation and NSGA-II
-
-<h4>Installing</h4>
-
-Using Linux is recommended. The codes were run on Ubuntu 16.04. Do the following steps to install the repository:
-
-* Install anaconda (https://docs.anaconda.com/anaconda/install/linux)
-* Set environment variables `export PATH=/.../anaconda3/bin:$PATH` and `export PYTHONPATH=/.../anaconda3/bin:$PYTHONPATH`
-* Clone the repository
-* On terminal run `conda config --add channels conda-forge`
-* Create a conda environment from the file *crowddynamics/environment.yml*
-* On terminal run `source activate multiobj-guided-evac`
-* On terminal, in folder *crowddynamics*, `run pip install --editable .`
-* Change to folder *crowddynamics-qtgui* and run `pip install -r requirements.txt`
-* Run `conda install pyqt=4`
-* Run `conda install pyqtgraph==0.10.0`
-* Run `conda install scikit-fmm==0.0.9`
-* Run `pip install anytree==2.1.4`
-* Run `pip install --editable .`
-
-You might occur problems in installing some of the python packages. You can install these packages manually using `conda install` or `pip install`.
+* *data_extraction_and_analysis.ipynb* is a Jupyter notebook for data extraction and analysis
+* *feature_selection_and_modeling.ipynb* is a Jupyter notebook for feature selection, model fitting and prediction.
+* *expanding_window.py* is a Python function for walk-forward cross-validation
+* *data* includes data input and output files (remember to unzip sensor measurements)
